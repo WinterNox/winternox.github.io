@@ -5,7 +5,7 @@ html {
 body {
     background-color: #101010;
     margin: 0px;
-    padding: 0px;
+    padding: 0;
 }
 
 h1 {
@@ -26,8 +26,8 @@ h2 {
 
 p {
     margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: hsl(0, 0%, 90%);
     font-size: 1.125em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -144,6 +144,7 @@ img.title {
     margin: 0 auto;
     padding: 42px;
     width: clamp(100px, 50%, 900px);
+    image-rendering: pixelated;
 }
 
 div.overlay {
