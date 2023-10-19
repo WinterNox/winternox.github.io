@@ -16,6 +16,12 @@ h1 {
     margin: 0px; padding: 16px;
 }
 
+h1.title {
+    display: none;
+    font-size: 0px;
+    padding: 0px;
+}
+
 h2 {
     color: white;
     font-size: 3em;
@@ -87,31 +93,38 @@ video.bg-video {
 
 video.screenshots {
     display: flex;
-    width: clamp(360px, 50%, 1440px);
+    width: clamp(180px, 50%, 1440px);
     justify-content: center;
     margin: 0 auto;
     border: 3px solid rgba(255, 255, 255, 0.25);
     border-radius: 16px;
 }
 
+@media all and (max-device-width: 480px) {
+    video.screenshots {
+        width: clamp(180px, 75%, 1440px);
+    }
+}
+
+
 
 div.social {
     display: flex;
     justify-content: center;
-    padding: 16px;
+    padding: 20px;
     background-color: #000;
     border: 2px solid rgba(255, 255, 255, 0.75);
-    border-radius: 12px;
+    border-radius: 16px;
     width: fit-content;
     margin: 0 auto;
 }
 
 div.project-layout {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 16px;
     background-color: rgba(0, 0, 0, 0.5);
-    width: fit-content;
+    width: 168px;
     border-radius: 12px;
     margin: 0 auto;
     position: relative;
@@ -120,16 +133,14 @@ div.project-layout {
 
 .social img {
     height: clamp(20px, 32px, 48px);
-    padding: 12px;
-    animation-name: decreaseSize;
-    animation-duration: 200ms;
-    animation-fill-mode: forwards;
+    transform: scale(1);
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 100ms;
 }
 
 .social :hover img{
-    animation-name: increaseSize;
-    animation-duration: 100ms;
-    animation-fill-mode: forwards;
+    transform: scale(1.2);
 }
 
 img.project-layout {
@@ -143,7 +154,7 @@ img.title {
     justify-content: center;
     margin: 0 auto;
     padding: 42px;
-    width: clamp(100px, 50%, 900px);
+    width: clamp(100px, 75%, 500px);
     image-rendering: pixelated;
 }
 
