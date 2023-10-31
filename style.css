@@ -102,8 +102,14 @@ video.screenshots {
 
 @media all and (max-device-width: 480px) {
     video.screenshots {
-        width: clamp(180px, 75%, 1440px);
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        border-top: 3px solid rgba(255, 255, 255, 0.25);
+        border-bottom: 3px solid rgba(255, 255, 255, 0.25);
     }
+
+
 }
 
 
