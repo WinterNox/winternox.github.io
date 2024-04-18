@@ -4,6 +4,8 @@ html {
 
 body {
     background-color: #101010;
+    background-image: url("./background.png");
+    background-attachment: fixed;
     margin: 0px;
     padding: 0;
 }
@@ -66,19 +68,25 @@ p {
 
 
 section.title {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     position: relative;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 section.projects {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.1);
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     margin-top: 40px;
 }
 
-
+iframe.projects {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 32px;
+    width: clamp(120px, 50%, 960px);
+}
 
 video.bg-video {
     padding: 0;
@@ -118,7 +126,7 @@ div.social {
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.25);
     border: 2px solid rgba(255, 255, 255, 0.75);
     border-radius: 16px;
     width: fit-content;
@@ -135,7 +143,6 @@ div.project-layout {
     margin: 0 auto;
     position: relative;
 }
-
 
 .social img {
     height: clamp(20px, 32px, 48px);
