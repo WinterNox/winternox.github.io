@@ -115,21 +115,32 @@ div.social {
     transition-duration: 150ms;
 }
 
-div.project-layout {
+div.projects {
     display: flex;
-    justify-content: space-between;
-    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     width: fit-content;
     border-radius: 12px;
     margin: 0 auto;
     position: relative;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.75);
+    border-radius: 32px;
+}
+
+iframe.projects {
+    width: 200px;
 }
 
 .social img {
     display: flex;
     justify-content: center;
     height: clamp(20px, 32px, 48px);
+    width: clamp(20px, 32px, 48px);
     fill: aqua;
     mix-blend-mode: screen;
     transform: scale(1);
